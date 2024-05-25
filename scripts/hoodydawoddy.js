@@ -5,7 +5,7 @@ loadProductFetch().then(()=>{
   const products = getProduct();
   let mainHtml =''
   products.forEach((product)=>{
-   /* console.log(product);*/
+    console.log(product);
     mainHtml += `
     <div class="grid-item">
       <div class="product-image">

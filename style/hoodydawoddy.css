@@ -11,6 +11,10 @@
   padding: 2px 25px;
   gap: 25px;
   overflow:hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 
 .left{
@@ -78,6 +82,7 @@
 .grid-container{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  margin-top: 40px;
 }
 .grid-item{
   display: flex;

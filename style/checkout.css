@@ -8,9 +8,11 @@
 .checkout-nevbar{
   background-color: #fff;
 /*   background-color: blue; */
-  margin-bottom: 100px;
   padding: 0;
-
+  position: fixed;
+  top: 0;
+  width: inherit;
+  z-index: 1;
 }
 .checkout-left{
   flex: 1;
@@ -32,6 +34,7 @@
   display: flex;
   flex-direction: column;
   padding: 5px;
+  margin-top: 120px;
 }
 .cart-container{
   display: flex;
@@ -40,14 +43,80 @@
   background-color: gray; */
   gap: 10px;
   align-items: baseline;
+  margin-top: 15px;
 }
-.cart1{
+.checkout-item-container{
   flex: 2;
-  background-color: red;
-  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 8px;
+}
+.card{
+/*   background-color: red; */
+  padding: 20px;
+  border: 1.5px solid rgba(128, 128, 128, 0.756);
+  border-radius: 10px;
+}
+.item-details{
+  display: flex;
+  margin-top: 25px;
+}
+.item-details img{
+  height: 120px;
+  margin-right: 20px;
+}
+.item-name-price{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 265px;
+  gap: 8px;
+  margin-right: 20px;
+}
+.item-name{
+  font-weight: bold;
+}
+.price-checkout{
+  color: brown;
+  font-weight: bold;
+}
+span{
+  cursor: pointer;
+  color: rgb(104, 104, 203);
+}
+span:hover{
+  color: orange;
+}
+.delivery-options{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.option-txt{
+  font-weight: bold;
+}
+.delivery-options-button{
+  display: flex;
+  gap: 5px;
+}
+.radio{
+  width: 18px;
+}
+.radio-options{
+  display: flex;
+  flex-direction: column;
+}
+
+.date-color{
+  font-size: 17px;
+  font-weight: bold;
+  color: rgb(35, 105, 35);
+}
+.shipping-text{
+  opacity: 0.6;
 }
 .cart2{
   flex: 1;
-  background-color: yellow;
-  height: 300px;
+  background-color: teal;
+  padding: 20px;
 }
