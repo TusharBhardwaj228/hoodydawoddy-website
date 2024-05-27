@@ -33,3 +33,15 @@ export function cartQuantityFun(){
   });
   return x;
 }
+
+ export function deleteCartItem(productId){
+  let newCart=[];
+  cart.map((cartItem)=>{
+    if(cartItem.id!==productId){
+      newCart.push(cartItem);
+    }
+  });
+  cart=newCart;
+  setStorage();
+  return cart;
+} 

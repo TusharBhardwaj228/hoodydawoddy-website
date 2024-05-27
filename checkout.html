@@ -12,7 +12,7 @@
   <div class="container">
     <div class="navbar checkout-nevbar">
       <div class="left checkout-left">
-        <img src="images/logo1.png" alt="logo">
+        <a href="./hoodydawoddy.html"><img src="images/logo1.png" alt="logo"></a>
       </div>
       <div class="middle checkout-middle">
         <div class="checkout-item">Checkout (3 item)</div>
@@ -24,8 +24,8 @@
     <div class="cart-section">
       <div class="review-order">Review your order</div>
       <div class="cart-container">
-        <div class="checkout-item-container">
-          <div class="card">
+        <div class="checkout-item-container js-checkout-item-container">
+<!--           <div class="card">
             <div class="delivery-date">Delivery date: Tuesday, June 4</div>
             <div class="item-details">
               <img src="images/products/athletic-cotton-socks-6-pairs.jpg" alt="img">
@@ -37,21 +37,21 @@
               <div class="delivery-options">
                 <div class="option-txt">Choose a delivery option:</div>
                 <div class="delivery-options-button">
-                  <input class="radio" type="radio" id="date1">
+                  <input class="radio" type="radio" id="date1" name="option">
                   <div class="radio-options">
                     <label class="date-color" for="date1">Tuesday, June 4</label>
                     <label class="shipping-text" for="date1">Free Shipping</label>
                   </div>
                 </div>
                 <div class="delivery-options-button">
-                  <input class="radio" type="radio" id="date2">
+                  <input class="radio" type="radio" id="date2" name="option">
                   <div class="radio-options">
                     <label class="date-color" for="date2">Wednesday, May 31</label>
                     <label class="shipping-text" for="date2">$4.99 Shipping</label>
                   </div>
                 </div>    
                 <div class="delivery-options-button">
-                  <input class="radio" type="radio" id="date3">
+                  <input class="radio" type="radio" id="date3" name="option">
                   <div class="radio-options">
                     <label class="date-color" for="date3">Saturday, May 27</label>
                     <label class="shipping-text" for="date3">$9.99 Shipping</label>
@@ -94,11 +94,12 @@
                 </div>             
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="cart2">2</div>        
       </div>
     </div>
   </div>
+  <script type="module" src="./scripts/checkout.js"></script>
 </body>
 </html>
