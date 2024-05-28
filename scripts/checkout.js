@@ -1,4 +1,4 @@
-import { getCart, cartQuantityFun, deleteCartItem } from "../data/cart.js";
+import { getCart, cartQuantityFun, deleteCartItem, saveItem } from "../data/cart.js";
 import { getProduct, loadProductFetch } from "../data/product.js";
 
 function renderItems(){
@@ -24,7 +24,15 @@ function renderItems(){
           <div class="item-name-price">
             <div class="item-name">${matchingProduct.name}</div>
             <div class="price-checkout">$${(matchingProduct.priceCents/100).toFixed(2)}</div>
-            <div class="quantity">Quantity: ${cartItem.quantity} <span class="update">Update </span> <span class="delete js-delete-button" data-product-id="${matchingProduct.id}">Delete</span></div>
+            <div class="quantity">Quantity: ${cartItem.quantity} 
+            <div class="update-div">
+              <span class="update js-update-button" data-product-id="${matchingProduct.id}">Update</span> 
+              <div class="save-div js-save-${matchingProduct.id}">
+                <input class="update-input js-update-input-${matchingProduct.id}" type="text">
+                <span class="save js-save-button-${matchingProduct.id}">Save</span> 
+              </div>
+            </div>
+            <span class="delete js-delete-button" data-product-id="${matchingProduct.id}">Delete</span></div>
           </div>
           <div class="delivery-options">
             <div class="option-txt">Choose a delivery option:</div>
@@ -61,8 +69,27 @@ function renderItems(){
         renderItems();
       })
     })
+    const quantity = cartQuantityFun();
+    document.querySelector('.js-checkout-item-quantity').innerHTML = `(${quantity} item)`;
+
+    document.querySelectorAll('.js-update-button').forEach((button)=>{
+      button.addEventListener('click', ()=>{
+        const productId = button.dataset.productId;
+        button.classList.add('update-visibilty');
+        document.querySelector(`.js-save-${productId}`).classList.add('save-visibility');
+        const saveButton  = document.querySelector(`.js-save-button-${productId}`);
+        saveButton.addEventListener('click', ()=>{
+          button.classList.remove('update-visibilty');
+          document.querySelector(`.js-save-${productId}`).classList.remove('save-visibility');
+          const quant = Number(document.querySelector(`.js-update-input-${productId}`).value);
+          saveItem(productId, quant);
+          renderItems();
+        })
+    })
+  })
   });
 
+  
 }
 renderItems();
 

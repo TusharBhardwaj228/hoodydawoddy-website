@@ -30,6 +30,10 @@
   font-size: 25px;
   font-weight: 550;
 }
+.checkout-item-quantity{
+  text-decoration: none;
+  color: #000;
+}
 .cart-section{
   display: flex;
   flex-direction: column;
@@ -85,6 +89,29 @@
 .price-checkout{
   color: brown;
   font-weight: bold;
+}
+.quantity{
+  display: flex;
+  gap: 4px;
+}
+.update-div{
+  width: 50px;
+  display: flex;
+  gap: 2px;
+}
+ .save-div{
+  display: none;
+} 
+.save-visibility{
+  width: 100%;
+  display: flex;
+  gap: 2px;
+}
+ .update-visibilty{
+  display: none;
+}
+.update-input{
+  width: 50%;
 }
 span{
   cursor: pointer;
