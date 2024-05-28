@@ -148,8 +148,36 @@ span:hover{
 .shipping-text{
   opacity: 0.6;
 }
-.cart2{
+.cart-price{
   flex: 1;
-  background-color: teal;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1.5px solid rgba(128, 128, 128, 0.756);
+  border-radius: 10px;
+}
+.carte{
+  display: flex;
+  justify-content: space-between;
+  height: 15px;
+}
+.carte1{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+.total-order{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.place-order{
+  padding: 10px;
+  background-color: gold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
 }
